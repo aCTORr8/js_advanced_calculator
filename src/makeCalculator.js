@@ -12,11 +12,11 @@ function makeCalculator() {
     },
 
     subtract(x) {
-      calculator.result -= x;
+      this.result -= x;
     },
 
     multiply(x) {
-      calculator.result *= x;
+      this.result *= x;
     },
 
     divide(x) {
@@ -24,19 +24,19 @@ function makeCalculator() {
         return 'Error';
       }
 
-      calculator.result /= x;
+      this.result /= x;
     },
 
     reset() {
-      calculator.result = 0;
+      this.result = 0;
 
-      return calculator;
+      return this;
     },
 
     operate(callback, x) {
-      callback.call(calculator, x);
+      callback.call(this, x);
 
-      return calculator;
+      return this;
     },
   };
 

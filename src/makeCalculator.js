@@ -8,7 +8,7 @@ function makeCalculator() {
     result: 0,
 
     add(x) {
-      calculator.result += x;
+      this.result += x;
     },
 
     subtract(x) {
